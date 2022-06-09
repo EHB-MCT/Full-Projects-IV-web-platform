@@ -7,10 +7,10 @@
     "monomialPower": 1
   },
   "fog": {
-    "color": "#e8decd",
+    "color": "#262829",
     "startRatio": 0.8
   },
-  "clearColor": "#1d1e1e",
+  "clearColor": "#32353B",
   "lights": [
     {
       "type": "ambient",
@@ -70,7 +70,7 @@
     }
   ],
   "images": {
-    "icons_night_maki": {
+    "maki_icons": {
       "url": "maki_icons.png",
       "preload": true,
       "atlas": "maki_icons.json"
@@ -110,7 +110,7 @@
         "clipping": false
       },
       {
-        "description": "residential - background",
+        "description": "residential - outline",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -125,7 +125,7 @@
         ],
         "technique": "solid-line",
         "renderOrder": 11,
-        "color": "#535557",
+        "color": "#000",
         "lineWidth": [
           "interpolate",
           ["linear"],
@@ -139,14 +139,14 @@
           13,
           7,
           14,
-          4
+          3.5
         ],
         "fadeNear": 0.8,
         "fadeFar": 0.9,
         "clipping": false
       },
       {
-        "description": "residential - foreground",
+        "description": "residential - fill",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -161,7 +161,7 @@
         ],
         "technique": "solid-line",
         "renderOrder": 11.3,
-        "color": "#3B3D3F",
+        "color": "#F2D12E",
         "lineWidth": [
           "interpolate",
           ["linear"],
@@ -182,7 +182,7 @@
         "clipping": false
       },
       {
-        "description": "residential - labels",
+        "description": "residential - text",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -195,12 +195,12 @@
             ["==", ["get", "kind_detail"], "service"]
           ]
         ],
-        "technique": "text",
+        "technique": "none",
         "renderOrder": 12,
         "color": "#999999",
         "backgroundColor": "#141414",
         "backgroundOpacity": 0.5,
-        "size": 16,
+        "size": 0,
         "priority": 15,
         "fadeNear": 0.8,
         "fadeFar": 0.9
@@ -236,8 +236,8 @@
         "renderOrder": 15.3,
         "secondaryRenderOrder": 10.3,
         "final": true,
-        "color": "#d26127",
-        "secondaryColor": "#d26127",
+        "color": "#F27C37",
+        "secondaryColor": "#000",
         "lineWidth": [
           "interpolate",
           ["linear"],
@@ -278,7 +278,7 @@
           13,
           9,
           14,
-          6
+          5.5
         ],
         "fadeNear": 0.8,
         "fadeFar": 0.9,
@@ -295,16 +295,16 @@
         ],
         "technique": "text",
         "renderOrder": 13,
-        "color": "#d26127",
-        "backgroundColor": "#d26127",
+        "color": "#999999",
+        "backgroundColor": "#141414",
         "backgroundOpacity": 0.5,
-        "size": 12.8,
+        "size": 0,
         "priority": 20,
         "fadeNear": 0.8,
         "fadeFar": 0.9
       },
       {
-        "description": "tertiary",
+        "description": "tertiary - outline",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -314,7 +314,7 @@
         ],
         "technique": "solid-line",
         "renderOrder": 10.3,
-        "color": "#56585B",
+        "color": "#000",
         "lineWidth": [
           "interpolate",
           ["linear"],
@@ -336,14 +336,14 @@
           13,
           7,
           14,
-          5
+          4.5
         ],
         "fadeNear": 0.8,
         "fadeFar": 0.9,
         "clipping": false
       },
       {
-        "description": "tertiary",
+        "description": "tertiary - fill",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -354,7 +354,7 @@
         "technique": "solid-line",
         "renderOrder": 15.3,
         "final": true,
-        "color": "#3D3E41",
+        "color": "#F2AB26",
         "lineWidth": [
           "interpolate",
           ["linear"],
@@ -402,13 +402,13 @@
         "color": "#999999",
         "backgroundColor": "#141414",
         "backgroundOpacity": 0.5,
-        "size": 16,
+        "size": 0,
         "priority": 25,
         "fadeNear": 0.8,
         "fadeFar": 0.9
       },
       {
-        "description": "primary",
+        "description": "primary - outline",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -422,7 +422,7 @@
         ],
         "technique": "solid-line",
         "renderOrder": 10.4,
-        "color": "#56585B",
+        "color": "#000",
         "lineWidth": [
           "interpolate",
           ["linear"],
@@ -444,14 +444,14 @@
           13,
           11,
           14,
-          7
+          6.5
         ],
         "fadeNear": 0.8,
         "fadeFar": 0.9,
         "clipping": false
       },
       {
-        "description": "primary",
+        "description": "primary - fill",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -466,7 +466,7 @@
         "technique": "solid-line",
         "renderOrder": 15.4,
         "final": true,
-        "color": "#3C3D3F",
+        "color": "#D84C1A",
         "lineWidth": [
           "interpolate",
           ["linear"],
@@ -509,7 +509,7 @@
         "color": "#999999",
         "backgroundColor": "#141414",
         "backgroundOpacity": 0.5,
-        "size": 12.8,
+        "size": 0,
         "priority": 25,
         "fadeNear": 0.8,
         "fadeFar": 0.9
@@ -530,77 +530,91 @@
         "dashSize": [
           "step",
           ["zoom"],
-          4000,
+          2000,
           7,
-          2500,
+          1250,
           8,
-          1500,
+          750,
           9,
-          1200,
+          600,
           10,
-          560,
+          280,
           11,
-          100,
-          12,
           50,
-          13,
-          25,
-          14,
-          16,
-          15,
           12,
+          25,
+          13,
+          12,
+          14,
+          8,
+          15,
+          6,
           16,
-          10
+          5,
+          17,
+          4,
+          18,
+          3
         ],
         "gapSize": [
           "step",
           ["zoom"],
-          4000,
+          2000,
           7,
-          2500,
+          1250,
           8,
-          1500,
+          750,
           9,
-          1200,
+          600,
           10,
-          300,
+          280,
           11,
-          100,
-          12,
           50,
-          13,
-          25,
-          14,
-          16,
-          15,
           12,
+          25,
+          13,
+          12,
+          14,
+          8,
+          15,
+          6,
           16,
-          10
+          5,
+          17,
+          4,
+          18,
+          3
         ],
         "lineWidth": [
           "interpolate",
           ["linear"],
           ["zoom"],
           5,
+          640,
+          6,
           320,
-          6,
-          160,
           7,
-          80,
+          160,
           8,
+          80,
+          9,
           40,
-          9,
-          15,
           10,
-          9,
+          15,
           11,
-          6,
+          9,
           12,
-          3,
+          6,
           13,
-          1.5,
+          3,
           14,
-          1
+          1.5,
+          15,
+          1,
+          16,
+          0.5,
+          17,
+          0.5
         ],
         "fadeNear": 0.8,
         "fadeFar": 0.9
@@ -627,7 +641,7 @@
         "clipping": false
       },
       {
-        "description": "pedestrian - background",
+        "description": "pedestrian - outline",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -663,14 +677,14 @@
         ],
         "technique": "solid-line",
         "renderOrder": 10.3,
-        "color": "#5D5F62",
+        "color": "#000",
         "lineWidth": 1.5,
         "fadeNear": 0.8,
         "fadeFar": 0.9,
         "clipping": false
       },
       {
-        "description": "pedestrian - foreground",
+        "description": "pedestrian - fill",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -706,14 +720,14 @@
         ],
         "technique": "solid-line",
         "renderOrder": 12.3,
-        "color": "#353637",
+        "color": "#FFF4BF",
         "lineWidth": 1.3,
         "fadeNear": 0.8,
         "fadeFar": 0.9,
         "clipping": false
       },
       {
-        "description": "pedestrian - labels",
+        "description": "pedestrian - text",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -752,7 +766,7 @@
         "color": "#999999",
         "backgroundColor": "#141414",
         "backgroundOpacity": 0.5,
-        "size": 16,
+        "size": 0,
         "priority": 15,
         "fadeNear": 0.8,
         "fadeFar": 0.9
@@ -811,7 +825,7 @@
         "color": "#606164"
       },
       {
-        "description": "Railway+S-Bahn background",
+        "description": "Railway+S-Bahn background - outline",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -827,7 +841,6 @@
         "technique": "solid-line",
         "renderOrder": 5.2,
         "color": "#6A6C6F",
-        "clipping": false,
         "lineWidth": [
           "interpolate",
           ["linear"],
@@ -841,7 +854,7 @@
         ]
       },
       {
-        "description": "Railway+S-Bahn background",
+        "description": "Railway+S-Bahn background - outline",
         "when": [
           "all",
           ["==", ["get", "$layer"], "roads"],
@@ -857,7 +870,6 @@
         "technique": "solid-line",
         "renderOrder": 5.1,
         "color": "#6A6C6F",
-        "clipping": false,
         "lineWidth": ["interpolate", ["linear"], ["zoom"], 13, 3.5, 21, 2.5]
       },
       {
@@ -878,7 +890,6 @@
         "renderOrder": 5.25,
         "final": true,
         "color": "#7B7E81",
-        "clipping": false,
         "dashSize": [
           "step",
           ["zoom"],
@@ -933,7 +944,6 @@
         "renderOrder": 5.15,
         "final": true,
         "color": "#454648",
-        "clipping": false,
         "dashSize": [
           "step",
           ["zoom"],
@@ -979,17 +989,17 @@
         ],
         "technique": "fill",
         "renderOrder": 5,
-        "color": "#096e91"
+        "color": "#0F1621"
       },
       {
         "description": "water",
         "when": ["==", ["get", "$layer"], "water"],
         "technique": "text",
-        "color": "#096e91",
-        "backgroundColor": "#096e91",
+        "color": "#999999",
+        "backgroundColor": "#141414",
         "backgroundOpacity": 0.5,
-        "opacity": 1,
-        "size": 12.8
+        "opacity": 0.5,
+        "size": 0
       },
       {
         "description": "country border",
@@ -1215,7 +1225,7 @@
         "size": 12.8
       },
       {
-        "description": "region border",
+        "description": "region border - outline",
         "when": [
           "all",
           ["==", ["get", "$layer"], "boundaries"],
@@ -1340,7 +1350,7 @@
         "technique": "fill",
         "renderOrder": 0,
         "opacity": 0.8,
-        "color": "#d26127"
+        "color": "#3B3E45"
       },
       {
         "description": "urban area",
@@ -1352,23 +1362,7 @@
         ],
         "technique": "none",
         "renderOrder": 0.1,
-        "color": [
-          "interpolate",
-          ["linear"],
-          ["zoom"],
-          7,
-          "#646668",
-          8,
-          "#646668",
-          9,
-          "#616465",
-          10,
-          "#616365",
-          11,
-          "#616365",
-          12,
-          "#646668"
-        ]
+        "color": "#3B3E45"
       },
       {
         "description": "park",
@@ -1400,7 +1394,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0.2,
-        "color": "#474A4B"
+        "color": "#373A40"
       },
       {
         "description": "runway",
@@ -1413,7 +1407,7 @@
         "technique": "fill",
         "renderOrder": 20,
         "final": true,
-        "color": "#3F4243"
+        "color": "#2E3036"
       },
       {
         "description": "aerodrome",
@@ -1425,7 +1419,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0.3,
-        "color": "#444748"
+        "color": "#373A40"
       },
       {
         "description": "national_park",
@@ -1437,7 +1431,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#454849"
+        "color": "#373A40"
       },
       {
         "description": "pitch",
@@ -1449,7 +1443,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#444748"
+        "color": "#373A40"
       },
       {
         "description": "hospital",
@@ -1461,7 +1455,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0.1,
-        "color": "#46484A"
+        "color": "#373A40"
       },
       {
         "description": "cemetery",
@@ -1473,7 +1467,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0.1,
-        "color": "#444748"
+        "color": "#373A40"
       },
       {
         "description": "bridge",
@@ -1485,7 +1479,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#505355"
+        "color": "#ff0000"
       },
       {
         "description": "zoo",
@@ -1501,7 +1495,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#414345"
+        "color": "#373A40"
       },
       {
         "description": "religion",
@@ -1513,7 +1507,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#616466"
+        "color": "#373A40"
       },
       {
         "description": "industrial",
@@ -1532,7 +1526,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0,
-        "color": "#444748"
+        "color": "#373A40"
       },
       {
         "description": "farmyard",
@@ -1551,7 +1545,7 @@
         ],
         "technique": "fill",
         "renderOrder": 0,
-        "color": "#616364"
+        "color": "#373A40"
       },
       {
         "description": "beach",
@@ -1567,7 +1561,7 @@
         ],
         "technique": "fill",
         "renderOrder": 1,
-        "color": "#5B5E5F"
+        "color": "#373A40"
       },
       {
         "description": "Earth layer",
@@ -1588,7 +1582,7 @@
           4,
           60
         ],
-        "color": "#f4f4f4",
+        "color": "#3B3E45",
         "backgroundColor": "#000000",
         "fontVariant": "SmallCaps",
         "opacity": 0.6
@@ -1601,7 +1595,7 @@
           ["==", ["get", "kind"], "island"]
         ],
         "technique": "text",
-        "color": "#f4f4f4",
+        "color": "#3B3E45",
         "backgroundColor": "#000000",
         "opacity": 0.6,
         "size": 16
@@ -1612,7 +1606,6 @@
           "all",
           ["==", ["get", "$layer"], "places"],
           ["==", ["get", "kind"], "country"],
-          ["has", "population"],
           [">", ["get", "population"], 10000000]
         ],
         "technique": "text",
@@ -1648,7 +1641,6 @@
           "all",
           ["==", ["get", "$layer"], "places"],
           ["==", ["get", "kind"], "country"],
-          ["has", "population"],
           [">", ["get", "population"], 1000000]
         ],
         "technique": "text",
@@ -1749,11 +1741,13 @@
           "all",
           ["==", ["get", "$layer"], "places"],
           ["==", ["get", "kind"], "locality"],
+          ["has", "population"],
           [
             "any",
-            [">", ["number", ["get", "population"], 0], 10000000],
+            [">", ["get", "population"], 10000000],
             ["has", "country_capital"]
-          ]
+          ],
+          ["has", "country_capital"]
         ],
         "technique": "text",
         "final": true,
@@ -1797,9 +1791,10 @@
           "all",
           ["==", ["get", "$layer"], "places"],
           ["==", ["get", "kind"], "locality"],
+          ["has", "population"],
           [
             "any",
-            [">", ["number", ["get", "population"], 0], 10000000],
+            [">", ["get", "population"], 10000000],
             ["has", "country_capital"]
           ]
         ],
@@ -1844,9 +1839,10 @@
           "all",
           ["==", ["get", "$layer"], "places"],
           ["==", ["get", "kind"], "locality"],
+          ["has", "population"],
           [
             "any",
-            [">", ["number", ["get", "population"], 0], 1000000],
+            [">", ["get", "population"], 1000000],
             ["has", "region_capital"]
           ]
         ],
@@ -2077,18 +2073,19 @@
         "technique": "extruded-polygon",
         "minZoomLevel": 16,
         "renderOrder": 2000,
-        "color": "#e8decd",
-        "opacity": 0.2,
+        "color": "#494B4C",
+        "opacity": 0.85,
+        "defaultHeight": 1,
         "roughness": 1,
         "metalness": 0.9,
-        "emissive": "#e8decd",
-        "emissiveIntensity": 0.75,
+        "emissive": "#383C45",
+        "emissiveIntensity": 0.5,
         "footprint": true,
         "maxSlope": 0.8799999999999999,
-        "lineWidth": 4,
-        "lineColor": "#096e91",
-        "lineColorMix": 0,
-        "fadeNear": 0.9,
+        "lineWidth": 1,
+        "lineColor": "#000",
+        "lineColorMix": 0.1,
+        "fadeNear": 0.1,
         "fadeFar": 1,
         "lineFadeNear": 0.1,
         "lineFadeFar": 0.7

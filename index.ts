@@ -36,7 +36,7 @@ const options = {
   labels: false,
   toneMappingExposure: 1.0,
   outline: {
-    enabled: true,
+    enabled: false,
     ghostExtrudedPolygons: false,
     thickness: 0.004,
     color: "#898989",
@@ -48,12 +48,12 @@ const options = {
     radius: 1,
   },
   vignette: {
-    enabled: true,
+    enabled: false,
     offset: 1,
     darkness: 0.5,
   },
   sepia: {
-    enabled: true,
+    enabled: false,
     amount: 0.8,
   },
 };
@@ -88,24 +88,7 @@ const material = new THREE.MeshStandardMaterial({
   opacity: 0.9,
   transparent: true,
 });
-function createPinkCube(): MapAnchor<THREE.Object3D> {
-  // To avoid not seeing the cube at all if it is fully behind the buildings
-  // and also to have some nice visuals if it is partially occluded we
-  // render two passes:
-  // 1. render the cube semi-transparent w/o depth test (renders entire cube)
-  // 2. render the cube almost opaque w/ depth test (renders only un-occluded part)
-  const cube = new THREE.Object3D();
 
-  const prePassMesh = new THREE.Mesh(geometry, prePassMaterial);
-  prePassMesh.renderOrder = Number.MAX_SAFE_INTEGER - 1;
-  cube.add(prePassMesh);
-
-  const mesh = new THREE.Mesh(geometry, material);
-  mesh.renderOrder = Number.MAX_SAFE_INTEGER;
-  cube.add(mesh);
-  return cube;
-}
-
-const cube = createPinkCube();
-cube.anchor = new GeoCoordinates(50.847328669159126, 4.3511262681609235);
-console.log(cube);
+mapView.setTheme("resources/theme.json");
+mapView.loadPostEffects("resources/post-effects-streets.json");
+mapView.loadPostEffects("resources/post-effects-outline.json");
