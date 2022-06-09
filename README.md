@@ -5,6 +5,5 @@
 
 # How to launch this experiment:
 
-npm i
-
-right click index.html < open with live server
+```npm i```
+```right click index.html < open with live server```
