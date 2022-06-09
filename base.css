@@ -1,0 +1,24 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: rgb(210,101,128);
+  background: linear-gradient(to bottom, #ff0074 0%, #e000e0 60%, #7700cc 100%);
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  overflow: hidden;
+}
+
+#box-content{
+  display: none;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  width: 50vw;
+  padding: 2em;
+  margin-right: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color:antiquewhite;
+}
