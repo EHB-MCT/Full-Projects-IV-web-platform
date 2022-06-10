@@ -9,7 +9,7 @@ import { GeoCoordinates } from "@here/harp-geoutils";
 import { View } from "./View";
 
 import * as THREE from "three";
-import { MapAnchor } from "@here/harp-mapview";
+import { MapAnchor, MapViewEventNames } from "@here/harp-mapview";
 
 const app = new View({
   canvas: document.getElementById("map") as HTMLCanvasElement,
@@ -25,12 +25,22 @@ window.addEventListener("resize", () => {
   mapView.resize(window.innerWidth, window.innerHeight);
 });
 
-// center the camera to New York
-mapView.lookAt({
+const cameraOptions = {
   target: new GeoCoordinates(50.847328669159126, 4.3511262681609235),
-  zoomLevel: 16,
-  tilt: 30,
+  tilt: 70,
+  zoomLevel: 16.1,
+  heading: 0,
+  globe: true,
+  headingSpeed: 0.1,
+};
+mapView.addEventListener(MapViewEventNames.AfterRender, () => {
+  cameraOptions.heading =
+    (cameraOptions.heading + cameraOptions.headingSpeed) % 360;
+  mapView.lookAt(cameraOptions);
+  mapView.update();
 });
+
+// center the camera to New York
 
 const options = {
   labels: false,

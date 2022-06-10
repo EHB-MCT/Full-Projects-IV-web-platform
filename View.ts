@@ -43,12 +43,10 @@ export class View {
 
     MapControls.create(mapView);
 
-    // console.log(
-    //   (mapView.geoMaxBounds = new GeoBox(
-    //     new GeoCoordinates(50.83974767552581, 4.316129290206697),
-    //     new GeoCoordinates(50.84350457856893, 4.3282761706196275)
-    //   ))
-    // );
+    mapView.geoMaxBounds = new GeoBox(
+      new GeoCoordinates(50.83974767552581, 4.316129290206697),
+      new GeoCoordinates(50.84350457856893, 4.3282761706196275)
+    );
 
     return mapView;
   }
