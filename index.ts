@@ -27,8 +27,8 @@ window.addEventListener("resize", () => {
 
 const cameraOptions = {
   target: new GeoCoordinates(50.847328669159126, 4.3511262681609235),
-  tilt: 70,
-  zoomLevel: 16.1,
+  tilt: 71,
+  zoomLevel: 16.3,
   heading: 0,
   globe: true,
   headingSpeed: 0.1,
@@ -82,22 +82,6 @@ const updateRendering = () => {
 };
 
 updateRendering();
-// make sure the map is rendered
-mapView.update();
-
-const scale = 100;
-const geometry = new THREE.BoxGeometry(1 * scale, 1 * scale, 1 * scale);
-const prePassMaterial = new THREE.MeshStandardMaterial({
-  color: "#ff00fe",
-  opacity: 0.3,
-  depthTest: false,
-  transparent: true,
-});
-const material = new THREE.MeshStandardMaterial({
-  color: "#ff00fe",
-  opacity: 0.9,
-  transparent: true,
-});
 
 mapView.setTheme("resources/theme.json");
 mapView.loadPostEffects("resources/post-effects-streets.json");
