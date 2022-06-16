@@ -33,9 +33,14 @@
     }
     h1 {
       z-index: 3;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       align-self: flex-start;
     }
     h2 {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+
       text-align: left;
       font-size: 1.6em;
       margin-top: 1.2em;
@@ -45,7 +50,7 @@
         #ff0000 4.5px 4.5px 0px 0px, #000000 6px 6px 0px 0px,
         #0073ff 7.5px 7.5px 0px 0px, #000000 9px 9px 0px 0px;
 
-      padding: 0.2em 0.3em 0;
+      padding: 0.2em 0.3em;
 
       margin-left: 0vw;
       @media #{$media-desktop} {
@@ -73,7 +78,7 @@
       background-image: radial-gradient(ellipse, #0000, #0007),
         linear-gradient(0deg, #9725, #9725),
         url(https://i.ibb.co/vJt5HSh/noisy-texture-300x300-o10-d10-c-a82851-t1.png),
-        url("../../assets/campus.webp");
+        url("../../assets/img/ehb.jpg");
       background-size: 75%;
       background-repeat: no-repeat;
       background-position-x: 30%;
@@ -170,7 +175,7 @@
 @media only screen and (max-width: 600px) {
   #info-container {
     h1 {
-      font-size: 1.4em;
+      font-size: 4vw;
       margin: 0 1em;
     }
     h2 {

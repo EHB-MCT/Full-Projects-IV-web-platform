@@ -1,5 +1,6 @@
 header {
   position: relative;
+  padding-top: 2em;
   @media #{$media-tablet} {
     height: 15%;
     align-items: center;
@@ -8,8 +9,18 @@ header {
   div:first-child {
     display: none;
 
+    .bm-icon {
+      width: 50% !important;
+      padding-left: 2em;
+    }
+
+    .bm-menu-wrap {
+      background-color: $background;
+      top: 0;
+      height: 100vh;
+    }
     .bm-menu {
-      background: $background;
+      // background: rgba(237, 230, 217, 0.8);
       padding: 2.5em 1.5em 0;
       font-size: 1.15em;
       height: 100vh;
@@ -26,7 +37,7 @@ header {
         text-align: center;
         text-decoration: none;
         color: black;
-        font-weight: 600;
+        font-weight: 700;
         font-size: 0.8em;
         padding: 0.8em 1em;
         border: 1.5px solid black;
@@ -94,7 +105,7 @@ header {
       text-align: center;
       text-decoration: none;
       color: black;
-      font-weight: 600;
+      font-weight: 700;
       font-size: 0.8em;
       padding: 0.8em 1em;
       border: 1.5px solid black;

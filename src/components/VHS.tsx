@@ -92,9 +92,7 @@ export default function VHS(props: IProps) {
   return (
     <div
       style={{
-        transform: `translate(${
-          Math.floor((Math.random() - 0.5) * 20) * 4
-        }px, 0px)`,
+        transform: `translate(${Math.floor((Math.random() - 0.5) * 10)}%, 0px)`,
       }}
       className="vhs-container"
     >

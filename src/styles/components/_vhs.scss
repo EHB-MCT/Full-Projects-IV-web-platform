@@ -19,7 +19,7 @@
     z-index: 2;
     mix-blend-mode: hard-light;
     p {
-      color: #6a0f17;
+      color: #6a0f17 !important;
       font-family: "topsecretstamp", serif !important;
       font-size: 1.5vw;
       @media #{$media-tablet} {
@@ -34,9 +34,9 @@
     top: 25%;
     left: 50%;
     z-index: 2;
-    color: rgb(3, 0, 46);
     mix-blend-mode: hard-light;
     h1 {
+      color: rgb(3, 0, 46) !important;
       font-family: "Permanent Marker", cursive !important;
       font-size: 2.5vw;
       @media #{$media-tablet} {

@@ -1,80 +1,85 @@
-@media only screen and (max-width: 1023px) {
-    .streaming {
-        display: flex;
-        flex-direction: column;
-        width: 100vw;
-        height: 100vh;
-    }
-    .streamingBottom {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 5vw 0 3vw;
-        margin-top: 0.25vh;
-    }
-    .sharebutton {
-        opacity: 0%;
-    }
-    .streamingBottom h1 {
-        font-size: 6vw;
-    }
-    .shareDiv {
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-    @media screen and (orientation:landscape) {
-        .streamingBottom {
-            background-color: transparent;
-            position: absolute;
-        }
-        .streaming {
-            flex-direction: row;
-        }
-        .streamingBottom {
-            position: absolute;
-            bottom: 5vh;
-            width: 55vw;
-        }
-        .streamingBottom h1 {
-            font-size: 2vw;
-        }
-    }
+.streaming {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 
-@media only screen and (min-width: 1024px) {
-    .streaming {
-        display: flex;
-        flex-direction: row;
-        width: 100vw;
-        gap: 37.5vw;
-        height: 87.5vh;
-    }
-    .streamingBottom {
-        position: absolute;
-        top: 88.5%;
-        display: flex;
-        width: 67.5vw;
-        margin: 0 5vw 0 5vw;
-        align-items: center;
-    }
-    .actionsYoutube a {
-        justify-content: flex-end;
-    }
-    .sub {
-        background-color: $background;
-        color: $dark;
-    }
-    .sharebutton {
-        cursor: pointer;
-        width: 100px;
-        text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        padding: 0.5em 1em;
-        margin: 0em 3em;
-        transition: box-shadow 0.2s ease-in-out;
-        &:hover {
-            box-shadow: #ffea00 1.5px 1.5px 0px 0px, #000000 3px 3px 0px 0px, #ff0000 4.5px 4.5px 0px 0px, #000000 6px 6px 0px 0px, #0073ff 7.5px 7.5px 0px 0px, #000000 9px 9px 0px 0px;
-        }
-    }
-}
+// @media only screen and (max-width: 1023px) {
+//   .streaming {
+//     display: grid;
+//     flex-direction: column;
+//     height: 100vh;
+//   }
+//   .streamingBottom {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 0 5vw 0 3vw;
+//     margin-top: 0.25vh;
+//   }
+//   .sharebutton {
+//     opacity: 0%;
+//   }
+//   .streamingBottom h1 {
+//     font-size: 6vw;
+//   }
+//   .shareDiv {
+//     background-position: center;
+//     background-repeat: no-repeat;
+//   }
+//   @media screen and (orientation: landscape) {
+//     .streamingBottom {
+//       background-color: transparent;
+//       position: absolute;
+//     }
+//     .streaming {
+//       flex-direction: row;
+//     }
+//     .streamingBottom {
+//       position: absolute;
+//       bottom: 5vh;
+//       width: 55vw;
+//     }
+//     .streamingBottom h1 {
+//       font-size: 2vw;
+//     }
+//   }
+// }
+
+// @media only screen and (min-width: 1024px) {
+//   .streaming {
+//     display: flex;
+//     flex-direction: row;
+//     gap: 37.5vw;
+//     height: 87.5vh;
+//   }
+//   .streamingBottom {
+//     position: absolute;
+//     top: 88.5%;
+//     display: flex;
+//     width: 67.5vw;
+//     margin: 0 5vw 0 5vw;
+//     align-items: center;
+//   }
+//   .actionsYoutube a {
+//     justify-content: flex-end;
+//   }
+//   .sub {
+//     background-color: $background;
+//     color: $dark;
+//   }
+//   .sharebutton {
+//     cursor: pointer;
+//     width: 100px;
+//     text-align: center;
+//     text-decoration: none;
+//     font-weight: 600;
+//     padding: 0.5em 1em;
+//     margin: 0em 3em;
+//     transition: box-shadow 0.2s ease-in-out;
+//     &:hover {
+//       box-shadow: #ffea00 1.5px 1.5px 0px 0px, #000000 3px 3px 0px 0px,
+//         #ff0000 4.5px 4.5px 0px 0px, #000000 6px 6px 0px 0px,
+//         #0073ff 7.5px 7.5px 0px 0px, #000000 9px 9px 0px 0px;
+//     }
+//   }
+// }
