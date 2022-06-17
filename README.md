@@ -1,10 +1,11 @@
 # Full Projects IV - Web Platform
 
-_Djari Ilyes, Mayorga Mera Ricardo, Van De Casteele Matthias, Benoît Dossoine, Finn Janssens_
+_Djari Ilyes, Mayorga Mera Ricardo, Van De Casteele Matthias, Dossoine Benoît, Janssens Finn_
 
 ## Deployment documentation
 
 Repository link: https://github.com/EHB-MCT/Full-Projects-IV-web-platform.git
+Website: https://finalshow.be/
 The platform was built using the React library (https://reactjs.org/).
 
 ```
@@ -18,26 +19,13 @@ npm start
 
 ```
 
-### Homepage
+**The current working release lives on the development branch.**
 
-The working homepage is to be found on the **homepage branch**.
+_used packages_
 
-_Used packages_
-
-- react-countdown (https://www.npmjs.com/package/react-countdown): The countdown clock on the homepage was made with a Countdown component from this package.
-
-### Harp.gl map
-
-We tested creating a 3D map using the harp.gl rendering engine (that uses THREE.js). This can be found on the **experiment-harpgl branch**.
-
-_Used packages_
-
-- Harpgl (https://www.harp.gl/docs/master/doc/index.html)
-
-### THREE.js camera animation / click events test
-
-We tested doing camera animations on click events in THREE.js **experiment-clickevents branch**
-
-_Used packages_
-
-- THREE.js (https://threejs.org/)
+- react-router-dom: https://www.npmjs.com/package/react-router-dom
+- react-three-fiber: https://www.npmjs.com/package/@react-three/fiber
+- react-burger-menu: https://www.npmjs.com/package/react-burger-menu
+- react-countdown: https://www.npmjs.com/package/react-countdown
+- react-ga: https://www.npmjs.com/package/react-ga
+- react-player: https://www.npmjs.com/package/react-player
