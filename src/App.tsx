@@ -33,7 +33,7 @@ function App() {
           <Route path="info" element={<Info />} />
           <Route path="timetable" element={<Timetable />} />
           <Route path="admin">
-            <Route path="hub" element={<Map/>} />
+            <Route path="hub" element={<Map />} />
             <Route path="live" element={<Livestream />} />
             <Route path="showroom" element={<p>showroom</p>} />
           </Route>
