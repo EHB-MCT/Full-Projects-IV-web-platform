@@ -7,11 +7,10 @@ title: Toyota corolla e70 (1980)
 */
 
 import * as THREE from "three";
-import React, { useRef } from "react";
-import { useGLTF, useHelper } from "@react-three/drei";
+import React, { useEffect, useMemo, useRef, useState } from "react";
+import { useGLTF, useHelper, SpotLight } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import { TargetedSpotLight } from "../Lights/TargetedSpotLight";
-import { SpotLight, SpotLightHelper } from "three";
 
 type GLTFResult = GLTF & {
     nodes: {
@@ -70,23 +69,34 @@ export function Toyota({ ...props }: JSX.IntrinsicElements["group"]) {
         "/toyota_corolla_e70_1980/scene.gltf"
     ) as GLTFResult;
 
-    const lightRef = useRef<SpotLight>(null);
-    useHelper(lightRef, SpotLightHelper, "cyan");
+    const [target] = useState(() => new THREE.Object3D());
 
     return (
         <group ref={group} {...props} dispose={null} castShadow receiveShadow>
             <group rotation={[-Math.PI / 2, 0, 0]}>
                 <group rotation={[Math.PI / 2, 0, 0]}>
-                    <mesh position={[60, 70, -200]}>
+                    <mesh position={[70, 0, -250]}>
                         <boxBufferGeometry args={[10, 10, 10]} />
                         <meshLambertMaterial color={"pink"} />
                     </mesh>
-                    <pointLight position={[60, 70, -180]} />
-                    <spotLight
-                        ref={lightRef}
-                        position={[60, 70, -180]}
+                    {/* <pointLight position={[60, 70, -180]} intensity={0.4} /> */}
+                    <SpotLight
                         castShadow
+                        position={[60, 70, -180]}
+                        color={"lightsalmon"}
+                        target={target}
+                        penumbra={0.2}
+                        radiusTop={2}
+                        radiusBottom={80}
+                        distance={200}
+                        angle={0.6}
+                        attenuation={20}
+                        anglePower={5}
+                        intensity={1}
+                        opacity={0.2}
                     />
+                    <primitive object={target} position={[80, 0, -300]} />
+
                     <group
                         position={[37.83, 38.14, -107.97]}
                         rotation={[0, -Math.PI / 2, 0]}

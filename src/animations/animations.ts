@@ -1,11 +1,28 @@
 import { Camera, Vector3 } from "react-three-fiber";
 
+import * as THREE from "three";
+
 export const animateCameraWhileLooking = (
     camera: Camera,
     target: Vector3,
     position: Vector3,
     duration: number
 ) => {};
+
+export const getTargetOrientation = (
+    startPosition: THREE.Vector3,
+    targetPosition: THREE.Vector3,
+    targetUp: THREE.Vector3
+) => {
+    const rotationMatrix = new THREE.Matrix4();
+    rotationMatrix.lookAt(startPosition, targetPosition, targetUp);
+
+    const targetOrientation = new THREE.Quaternion().setFromRotationMatrix(
+        rotationMatrix
+    );
+
+    return targetOrientation;
+};
 
 // const animateToCinema = (event: ThreeEvent<MouseEvent>) => {
 //     console.log(hasAnimated);

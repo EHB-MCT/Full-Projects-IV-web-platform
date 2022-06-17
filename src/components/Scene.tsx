@@ -4,24 +4,8 @@ import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { ThreeEvent, useThree, Vector3 } from "react-three-fiber";
 import * as THREE from "three";
 import { MeshLambertMaterial } from "three";
-import {
-    Camaro,
-    Fiat,
-    Ground,
-    InfoBlock,
-    LiveStreamBlock,
-    RaceToyota,
-    ShowRoomBlock,
-    TimeTableBlock,
-    Topography,
-    Toyota,
-    Van,
-} from "./models";
+import { Topography } from "./models";
 import { Hotel } from "./models/Buildings/Hotel";
-import { Isopotamia } from "./models/Buildings/Isopotamia";
-import { Delorean } from "./models/Cars/Delorean";
-import Commodore from "./models/Commodore";
-import { StreetLight } from "./models/Objects";
 
 const Box = () => {
     return (
@@ -46,16 +30,16 @@ export const Scene = ({ setPreview, setShowPreview }: SceneProps) => {
 
     return (
         <>
-            {/* <OrbitControls
+            <OrbitControls
                 // minDistance={minDistance}
                 enabled={enableOrbit}
                 enableZoom={true}
                 target={currentTarget}
-                minPolarAngle={-Math.PI / 3}
-                maxPolarAngle={Math.PI / 2}
-                minAzimuthAngle={-Math.PI / 3}
-                maxAzimuthAngle={Math.PI / 3}
-            /> */}
+                // minPolarAngle={-Math.PI / 3}
+                // maxPolarAngle={Math.PI / 2}
+                // minAzimuthAngle={-Math.PI / 3}
+                // maxAzimuthAngle={Math.PI / 3}
+            />
             <spotLight intensity={0.4} color="white" position={[20, 20, 0]} />
             <ambientLight intensity={0.4} />
             {/* <gridHelper
@@ -67,24 +51,7 @@ export const Scene = ({ setPreview, setShowPreview }: SceneProps) => {
                 rotation={[0, -Math.PI / 2, 0]}
                 position={[-100, 20, 100]}
             />
-            <Camaro
-                scale={1000}
-                position={[60, 1.5, 100]}
-                rotation={[0, -Math.PI / 2, 0]}
-            />
-            <Van scale={8} position={[85, 9, 0]} />
-            <Fiat
-                scale={12}
-                rotation={[0, Math.PI, 0]}
-                position={[60, 6.5, 0]}
-            />
-            <Delorean scale={6} position={[-80, 0, -200]} />
-            <Toyota scale={0.1} position={[60, 0, -200]} />
-            <RaceToyota
-                scale={12}
-                rotation={[0, Math.PI / 2, 0]}
-                position={[-60, 0, -100]}
-            />
+
             {/* <group rotation={[0, Math.PI, 0]}>
                 <Toyota
                     scale={0.1}
