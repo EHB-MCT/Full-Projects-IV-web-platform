@@ -11,7 +11,7 @@ function Livestream() {
         <div className="streaming">
           <VideoPlayer></VideoPlayer>
           <div className="streamingBottom">
-            <h1>EhB Final show 2022</h1>
+            <h1>Behind the scenes - Final Show 2022</h1>
             <div className="actionsYoutube">
               <Share></Share>
             </div>

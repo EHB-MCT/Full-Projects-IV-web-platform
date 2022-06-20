@@ -21,7 +21,6 @@ import ScifiBuilding from "./Buildings/ScifiBuilding";
 import ArcadeSpaceInvaders from "./Buildings/ArcadeSpaceInvaders";
 import Burger from "./Buildings/Burger";
 import MonacoBuilding from "./Buildings/MonacoBuilding";
-import { useNavigate } from "react-router-dom";
 
 export const Topography = ({ ...props }: JSX.IntrinsicElements["group"]) => {
     const ref = useRef<THREE.Group>(null);

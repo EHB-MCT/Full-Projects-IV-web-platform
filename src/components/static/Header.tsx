@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
-import { useSwipeable } from "react-swipeable";
 import logo from "../../assets/img/Final-Show-Logo.svg";
 import hamburgerIcon from "../../assets/img/menu-icon.svg";
 
@@ -22,7 +21,7 @@ export default function Header() {
   if (location.pathname != "/") {
     return (
       <>
-        <header>
+        <header id="mainHeader">
           <Menu
             customBurgerIcon={
               <svg
@@ -56,14 +55,7 @@ export default function Header() {
             <Link onClick={closeSideBar} to="timetable">
               TIMETABLE
             </Link>
-            <Link
-              onClick={closeSideBar}
-              to="admin/live"
-              style={{
-                pointerEvents: "none",
-                backgroundColor: "rgba(12, 12, 12, 0.5)",
-              }}
-            >
+            <Link onClick={closeSideBar} to="live">
               LIVE SHOW
             </Link>
             <Link
@@ -83,15 +75,7 @@ export default function Header() {
           <nav className="desktop-nav">
             <Link to="info">INFO</Link>
             <Link to="timetable">TIMETABLE</Link>
-            <Link
-              to="admin/live"
-              style={{
-                pointerEvents: "none",
-                backgroundColor: "rgba(12, 12, 12, 0.5)",
-              }}
-            >
-              LIVE SHOW
-            </Link>
+            <Link to="live">LIVE SHOW</Link>
             <Link
               to="admin/showroom"
               style={{
@@ -109,4 +93,3 @@ export default function Header() {
     return <></>;
   }
 }
-

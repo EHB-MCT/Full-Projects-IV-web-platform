@@ -36,14 +36,20 @@
       text-transform: uppercase;
       letter-spacing: 2px;
       align-self: flex-start;
+      width: 100%;
+      text-align: center;
+
+      @media screen and (max-width:1250px){
+        width: 80%;
+      }
     }
-    h2 {
+    h2.info-subtitle {
       text-transform: uppercase;
       letter-spacing: 2px;
 
       text-align: left;
       font-size: 1.6em;
-      margin-top: 1.2em;
+      margin-top: 1.8em;
       font-weight: bolder;
       align-self: flex-start;
       box-shadow: #ffea00 1.5px 1.5px 0px 0px, #000000 3px 3px 0px 0px,

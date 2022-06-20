@@ -1,89 +1,80 @@
 @media (prefers-color-scheme: dark) {
-  .sharebutton,
-  h1,
-  h2,
-  h3,
-  p,
-  header .desktop-nav a {
-    color: $background !important;
-  }
-
-  .bm-icon {
-    fill: $background;
-  }
-
-  header .desktop-nav a {
-    border-color: $background !important;
-  }
-  .web-share-fade-in-up,
-  .web-share-fade-in-up > button {
-    background-color: $dark !important;
-    color: $background !important;
-    font-weight: 700;
-  }
-  .web-share-fade-in-up header {
-    color: $background !important;
-  }
-  .shareDiv {
-    background-image: url("../../assets/share-light.svg");
-  }
-  @media screen and (max-width: 1023px) {
-    .streamingBottom {
-      background-color: #181818;
+    .sharebutton,
+    h1,
+    h2,
+    h3,
+    p,
+    #mainHeader .desktop-nav a {
+        color: $background !important;
     }
-  }
-  @media screen and (min-width: 1024px) {
-    .backarrow {
-      background-image: url(../../assets/back-arrow-light.svg);
+    .bm-icon {
+        fill: $background;
     }
-    .sharebutton {
-      border: 1.5px solid $background;
+    #mainHeader .desktop-nav a {
+        border-color: $background !important;
+    }
+    .web-share-fade-in-up,
+    .web-share-fade-in-up>button {
+        background-color: $dark !important;
+        color: $background !important;
+        font-weight: 700;
+    }
+    .web-share-fade-in-up #mainHeader {
+        color: $background !important;
     }
     .shareDiv {
-      background-image: none;
+        background-image: url("../../assets/share-light.svg");
     }
-  }
+    @media screen and (max-width: 1023px) {
+        .streamingBottom {
+            background-color: #181818;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .backarrow {
+            background-image: url(../../assets/back-arrow-light.svg);
+        }
+        .sharebutton {
+            border: 1.5px solid $background;
+        }
+        .shareDiv {
+            background-image: none;
+        }
+    }
 }
 
 @media (prefers-color-scheme: light) {
-  .livebody {
-    background-image: url("../../assets/lightbg.png");
-    background-repeat: repeat;
-    width: 100vw;
-    height: 100vh;
-    color: $dark;
-  }
-  .web-share-fade-in-up,
-  .web-share-fade-in-up > button {
-    background-color: $background !important;
-  }
-  .web-share-fade-in-up header {
-    color: $dark !important;
-  }
-  .sharebutton,
-  h1,
-  h2,
-  h3,
-  p {
-    color: $dark;
-  }
-  .sharebutton {
-    border: 1.5px solid $dark;
-  }
-  .shareDiv {
-    background-image: url("../../assets/share-dark.svg");
-  }
-  @media screen and (max-width: 1023px) {
-    .streamingBottom {
-      background-color: #f9f9f9;
+    .web-share-fade-in-up,
+    .web-share-fade-in-up>button {
+        background-color: $background !important;
     }
-  }
-  @media screen and (min-width: 1024px) {
-    .backarrow {
-      background-image: url(../../assets/back-arrow-dark.svg);
+    .web-share-fade-in-up #mainHeader {
+        color: $dark !important;
+    }
+    .sharebutton,
+    h1,
+    h2,
+    h3,
+    p {
+        color: $dark;
+    }
+    .sharebutton {
+        border: 1.5px solid $dark;
     }
     .shareDiv {
-      background-image: none;
+        background-image: url("../../assets/share-dark.svg");
     }
-  }
+    @media screen and (max-width: 1023px) {
+        .streamingBottom {
+            background-color: #f9f9f9;
+        }
+    }
+    @media screen and (min-width: 1024px) {
+        .backarrow {
+            background-image: url(../../assets/back-arrow-dark.svg);
+        }
+        .shareDiv {
+            background-image: none;
+        }
+    }
 }

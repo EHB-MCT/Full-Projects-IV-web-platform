@@ -2,15 +2,13 @@ import React, { useEffect } from "react";
 
 import { Route, Routes, BrowserRouter, Link } from "react-router-dom";
 
-import Livestream from "./pages/Livestream";
+import Livestream from "./pages/Livestream.page";
 import Info from "./pages/Info.page";
 import { Index } from "./pages/Index.page";
 import Timetable from "./pages/Timetable.page";
 import Notfound from "./pages/Notfound.page";
 
 import Header from "./components/static/Header";
-
-import logo from "./logo.svg";
 
 import ReactGA from "react-ga";
 
@@ -32,9 +30,9 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="info" element={<Info />} />
           <Route path="timetable" element={<Timetable />} />
+          <Route path="live" element={<Livestream />} />
           <Route path="admin">
             <Route path="hub" element={<Map />} />
-            <Route path="live" element={<Livestream />} />
             <Route path="showroom" element={<p>showroom</p>} />
           </Route>
           <Route path="*" element={<Notfound />}></Route>

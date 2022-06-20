@@ -1,22 +1,25 @@
 export default function BackgroundStripes() {
   return (
     <div id="stripes-container">
-      <div id="pink" className="stripe">
+      <a href="#info-container" id="pink" className="stripe stripe-hover">
         <p>Multimedia &</p>
         <p>Creatieve Technologie</p>
-      </div>
-      <div id="yellow" className="stripe">
+      </a>
+      <a id="yellow" className="stripe">
         
-      </div>
-      <div id="orange" className="stripe">
+      </a>
+      <a href="#livestreamTitle" id="orange" className="stripe stripe-hover">
         <p>Livestream</p>
         <p>24/06 19u</p>
-      </div>
-      <div id="red" className="stripe">
+      </a>
+      <a href="#infoDagSection" id="red" className="stripe stripe-hover">
         <p>Infodag</p>
         <p>25/06 10u</p>
-      </div>
-      <div id="blue" className="stripe"></div>
+      </a>
+      <a href="#expoSection" id="blue" className="stripe stripe-hover">
+        <p>Expo</p>
+        <p>24/06 & 25/06</p>
+      </a>
     </div>
   );
 }
