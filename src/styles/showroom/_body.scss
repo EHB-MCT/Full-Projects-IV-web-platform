@@ -1,133 +1,120 @@
 @import "Colors";
 @import "_scrollbar.scss";
-
 .cassettesContainer {
-  display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin-top: 5vh;
 }
 
 #searchForm {
-  display: none;
+    display: none;
 }
 
 #searchFormMobile {
-  display: block;
-  width: 100%;
-  margin-left: 5vw;
-  margin-top: -5vh;
+    display: block;
+    width: 100%;
+    margin-left: 5vw;
+    margin-top: -5vh;
 }
 
 input {
-  border: none;
-  border-bottom: 1px solid gray;
-  background-color: transparent;
-  width: 80%;
-  padding: 5px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background-color: transparent;
+    width: 80%;
+    padding: 5px;
 }
 
 input:active {
-  border: none;
-  outline: none;
+    border: none;
+    outline: none;
 }
 
 input:focus {
-  border: none;
-  outline: none;
-  border-bottom: 1px solid gray;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
 }
 
 select {
-  width: 80%;
-  padding: 5px;
-  margin-top: 20px;
-  background-color: transparent;
+    width: 80%;
+    padding: 5px;
+    margin-top: 20px;
+    background-color: transparent;
 }
 
-@media (prefers-color-scheme: dark){
-  .clusterSelection{
-    color: white;
-    background-color: $darkmodus;
-  }
+@media (prefers-color-scheme: dark) {
+    .clusterSelection {
+        color: white;
+        background-color: $darkmodus;
+    }
 }
 
-@media (prefers-color-scheme: light){
-  #searchIcon {
-    width: 22px;
-  }
-  
-  #searchIconWhite{
-    display: none;
-  }
+@media (prefers-color-scheme: light) {
+    #searchIcon {
+        width: 22px;
+    }
+    #searchIconWhite {
+        display: none;
+    }
 }
 
-@media (prefers-color-scheme: dark){
-  #searchIcon {
-    display: none;
-  }
-  
-  #searchIconWhite{
-    width: 22px;
-  }
+@media (prefers-color-scheme: dark) {
+    #searchIcon {
+        display: none;
+    }
+    #searchIconWhite {
+        width: 22px;
+    }
 }
-
 
 // #searchIcon {
 //   width: 22px;
 // }
-
 @media (min-width: 780px) {
-  #filterMobBtn {
-    display: none;
-  }
-  .cassettesContainer {
-    margin-left: 20%;
-    padding-right: 3%;
-    width: 60%;
-    height: 70vh;
-  }
-
-  #searchFormMobile {
-    display: none;
-  }
-
-  #searchForm {
-    display: block;
-    width: 91%;
-    margin-left: 5.8vw;
-    margin-top: -2vh;
-  }
-
-  @media (prefers-color-scheme: light){
-    #searchIcon {
-      display: inline;
+    #filterMobBtn {
+        display: none;
     }
-    
-    #searchIconWhite{
-      display: none;
+    .cassettesContainer {
+        margin-left: 20%;
+        padding-right: 3%;
+        width: 60%;
+        height: 70vh;
     }
-  }
-
-  @media (prefers-color-scheme: dark){
-    #searchIcon {
-      display: none;
+    #searchFormMobile {
+        display: none;
     }
-    
-    #searchIconWhite{
-      width: 22px;
+    #searchForm {
+        display: block;
+        width: 91%;
+        margin-left: 5.8vw;
+        margin-top: -2vh;
     }
-  }
-
-  #SearchFormWrapper{
-    margin-left: 33.7%;
-  }
-
-  input {
-    width: 40%;
-  }
-
-  select {
-    margin-left: 100px;
-    width: 20%;
-  }
+    @media (prefers-color-scheme: light) {
+        #searchIcon {
+            display: inline;
+        }
+        #searchIconWhite {
+            display: none;
+        }
+    }
+    @media (prefers-color-scheme: dark) {
+        #searchIcon {
+            display: none;
+        }
+        #searchIconWhite {
+            width: 22px;
+        }
+    }
+    #SearchFormWrapper {
+        margin-left: 33.7%;
+    }
+    input {
+        width: 40%;
+    }
+    select {
+        margin-left: 100px;
+        width: 20%;
+    }
 }
