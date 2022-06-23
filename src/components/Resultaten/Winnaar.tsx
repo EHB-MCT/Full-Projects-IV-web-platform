@@ -9,18 +9,18 @@ function Winnaar() {
   const [finalWorks, setFinalWorks] = useState([]);
 
   useEffect(() => {
-    finalWorkService.fetchFinalWorks().then((Response) => {
-      var templateData = Response.slice(0, 40);
-      setFinalWorks(templateData);
-    });
-  }, []);
+    finalWorkService.fetchAwards().then((Response) => {
+        setFinalWorks(Response) 
+      })
+}, [])
+
 
   const renderer = ({ days, hours, minutes, seconds, completed }: any) => {
     if (completed) {
       return (
-        <div className="cassettesContainer">
-          {finalWorks.map((x) => {
-            return <Cassette data={x} key={x["id"]}></Cassette>;
+        <div className="cassettesContainerNominees">
+          {finalWorks.map((x: any) => {
+            return <Cassette data={x.final_work_id} key={x["id"]}></Cassette>;
           })}
         </div>
       );

@@ -31,7 +31,7 @@ export default function Slider(props: any) {
                 </SwiperSlide>
                 {props.data.images.map((image: any, index: any) => {
                     return (
-                        <SwiperSlide>
+                        <SwiperSlide key={index}>
                             <img
                                 src={image.path.replace(
                                     "http://finalshowcasebackend.be/storage/",
@@ -61,7 +61,7 @@ export default function Slider(props: any) {
                 </SwiperSlide>
                 {props.data.images.map((image: any, index: any) => {
                     return (
-                        <SwiperSlide>
+                        <SwiperSlide key={index} className="imageSliderBottom">
                             <img
                                 src={image.path.replace(
                                     "http://finalshowcasebackend.be/storage/",

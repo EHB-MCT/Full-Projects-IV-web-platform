@@ -134,7 +134,7 @@ function Genomineerd() {
   return (
     <div className="allClusters">
       <Countdown
-        date={new Date("2022-06-23T19:00:00+02:00")}
+        date={new Date("2022-06-24T12:00:00+02:00")}
         renderer={renderer}
       />
     </div>

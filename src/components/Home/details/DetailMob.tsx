@@ -10,7 +10,7 @@ import linkedin from "../../../assets/showroom/linkedin.png";
 import instagram from "../../../assets/showroom/instagram.png";
 import Slider from "./Slider";
 import { useState, useEffect } from "react";
-import { RWebShare } from 'react-web-share';
+import { RWebShare } from "react-web-share";
 
 export default function DetailMob(props: any) {
   const navigate = useNavigate();
@@ -57,7 +57,7 @@ export default function DetailMob(props: any) {
 
       <h1 id="projectArtistMob">
         {state.user.map((users: any) => {
-          return (users.name);
+          return users.name;
         })}
       </h1>
       <div id="projectNameMob">
@@ -72,15 +72,15 @@ export default function DetailMob(props: any) {
 
       <div id="personalInfoMob">
         <div id="contactInfoContainerMob">
-        <div id="maiMobl" className="infoFlexMob">
-                  <img src={mail} alt="mail icon" className="socialIcon" />
-                  <p className="mailAdresMob invulTextMob">
-                    {state.user.map((users: any) => {
-                      return users.email;
-                    })}
-                  </p>
-                </div>
-          {state.socials.map((social: any, index:any) => {
+          <div id="maiMobl" className="infoFlexMob">
+            <img src={mail} alt="mail icon" className="socialIcon" />
+            <p className="mailAdresMob invulTextMob">
+              {state.user.map((users: any) => {
+                return users.email;
+              })}
+            </p>
+          </div>
+          {state.socials.map((social: any, index: any) => {
             return (
               <div key={index}>
                 <div className="infoFlexMob">
@@ -109,7 +109,7 @@ export default function DetailMob(props: any) {
         </div>
       </div>
       <div id="shareContainerMob">
-      <RWebShare
+        {/* <RWebShare
                     data={{
                     text:"Bekijk hier mijn final work",
                     url: `https://finalshow.be/showcase/finalwork/${state.id}`,
@@ -118,7 +118,7 @@ export default function DetailMob(props: any) {
                     sites={["facebook", "instagram", "linkedin"]}
                     >
                 <img  src={share} alt="share-icon" id="shareIconMob"/>
-            </RWebShare>
+            </RWebShare> */}
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ import { useGLTF } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import { Select } from "@react-three/postprocessing";
 import pacman from "../../assets/3d/pacman.jpg";
-import { useFrame, useLoader, useThree } from "react-three-fiber";
+import { useFrame, useLoader } from "react-three-fiber";
 import { Group, Mesh } from "three";
 import { history } from "./History";
 import { NavBillboard } from "./NavBillboard";
@@ -221,7 +221,6 @@ type GLTFResult = GLTF & {
 };
 
 export function Room802({ ...props }: JSX.IntrinsicElements["group"]) {
-  const { camera, controls } = useThree();
   const group = useRef<THREE.Group>(null);
   const { nodes, materials } = useGLTF("/80s_room2/scene.gltf") as GLTFResult;
   const pacmanTexture = useLoader(THREE.TextureLoader, pacman);
@@ -285,10 +284,6 @@ export function Room802({ ...props }: JSX.IntrinsicElements["group"]) {
       state.camera.quaternion.slerp(arcadeCameraQ, 0.02);
       state.camera.position.lerp(new THREE.Vector3(50, 215, 325), 0.02);
     } else if (tvClick) {
-      // let newV = new THREE.Vector3(0, 0, 0);
-      // tvRef.current!.getWorldPosition(newV);
-      // state.camera.lookAt(newV);
-      // console.log(state.camera.quaternion);
       state.camera.quaternion.slerp(tvCameraQ, 0.02);
       state.camera.position.lerp(new THREE.Vector3(130, 40, -225), 0.02);
     } else if (posterClick) {

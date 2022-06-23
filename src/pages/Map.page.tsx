@@ -12,7 +12,6 @@ import {
 import { Vector2 } from "three";
 
 export const Map = ({ ...props }) => {
-  console.log(props);
   const [zoom, setZoom] = useState(1);
   useEffect(() => {
     if (window.innerWidth < 1100 && window.innerWidth > 850) {

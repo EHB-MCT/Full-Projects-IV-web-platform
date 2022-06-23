@@ -54,15 +54,15 @@ function Body() {
 }
 
 const getInput = (inputForm: any) => {
-setInput(inputForm)
+setInput(inputForm.toLowerCase())
     if(inputForm === ""){
         setSelectedWorks(cluster)
     }else {
         if(selectedWorks.length === finalWorks.length){
-             var filteredResults = finalWorks.filter((x:any) => x.user[0].name.toLowerCase().includes(inputForm) || x.title.toLowerCase().includes(inputForm))
+             var filteredResults = finalWorks.filter((x:any) => x.user[0].name.toLowerCase().includes(inputForm.toLowerCase()) || x.title.toLowerCase().includes(inputForm.toLowerCase()))
              setSelectedWorks(filteredResults)
         } else {
-            var filteredResults = cluster.filter((x:any) => x.user[0].name.toLowerCase().includes(inputForm) || x.title.toLowerCase().includes(inputForm))
+            var filteredResults = cluster.filter((x:any) => x.user[0].name.toLowerCase().includes(inputForm.toLowerCase()) || x.title.toLowerCase().includes(inputForm.toLowerCase()))
             setSelectedWorks(filteredResults)
         }
     } 

@@ -23,22 +23,16 @@ export default function BackgroundStripesShowcase() {
         )}
         <a id="yellow" className="stripe"></a>
         <a
-          href="http://finalshowcasebackend.be/"
           id="orange"
           className="stripe stripe-hover"
-          target="_blank"
         >
-          <p>Indienen</p>
         </a>
         <a
-          href="http://finalshowcasebackend.be/"
           id="red"
           className="stripe stripe-hover"
-          target="_blank"
         >
-          <p>Stemming</p>
         </a>
-        <a href="#expoSection" id="blue" className="stripe stripe-hover"></a>
+        <a href="#" id="blue" className="stripe stripe-hover"></a>
       </div>
     </>
   );

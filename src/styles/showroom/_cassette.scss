@@ -15,11 +15,13 @@
 }
 
 .cassetteOpenAnimation {
-    transform: rotate3d(-0.02, -1, 0, 60deg);
+  transform: rotate3d(-0.02, -1, 0, 60deg);
+  -webkit-transform: rotate3d(-0.02, -1, 0, 60deg);
 }
 
 .cassetteCloseAnimation {
-    transform: rotate3d(0);
+  transform: rotate3d(0);
+  -webkit-transform: rotate3d(0);
 }
 
 .cassette img {
@@ -27,26 +29,31 @@
 }
 
 .cassetteNameDiv {
-    background-color: transparent;
-    position: absolute;
-    top: 13%;
-    left: 3%;
-    display: table;
-    text-align: center;
+  background-color: transparent;
+  position: absolute;
+  top: 65%;
+  width: 100vw;
+  display: table;
+  text-align: center;
+  
 }
 
 .cassetteName {
-    font-size: 16pt;
-    font-weight: 700;
-    color: white;
-    writing-mode: vertical-lr;
-    background-color: transparent;
-    height: 48vh;
-    width: 20vw;
-    margin: auto;
-    padding: auto;
-    display: table-cell;
-    vertical-align: middle;
+  font-size: 16pt;
+  font-weight: 700;
+  color: white;
+
+  position: relative;
+  transform: translateX(-100%) rotate(90deg);
+  transform-origin: right;
+  -webkit-transform: translateX(-100%) rotate(90deg);
+  padding-left: 30vw;
+  padding-bottom: 10vh;
+  overflow-x: hidden;
+
+  background-color: transparent;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .clusterColors {
@@ -81,24 +88,32 @@
 }
 
 @media (min-width: 780px) {
-    .cassette {
-        height: 60vh;
-        margin-left: 35px;
-        margin-right: 0px;
-    }
-    .cassette img {
-        height: 58vh;
-    }
-    .cassetteName {
-        height: 40vh;
-    }
-    .fullCassetteWeb:hover {
-        transform: scale(0.95);
-    }
-    .fullCassetteWeb {
-        transition: all 0.3s ease-in-out;
-    }
-    .fullCassette {
-        display: flex;
-    }
+  .cassette {
+    height: 60vh;
+    margin-left: 35px;
+    margin-right: 0px;
+  }
+
+  .cassette img {
+    height: 58vh;
+  }
+
+  .fullCassetteWeb:hover {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+  }
+
+  .fullCassette {
+    display: flex;
+  }
+
+  .cassetteNameDiv {
+    top: 70%;
+    width: 40vw;
+  }
+  
+  .cassetteName {
+    padding-left: 44%;
+    // height: 40vh;
+  }
 }

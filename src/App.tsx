@@ -69,6 +69,7 @@ function App() {
           <Route path="hub" element={<Map />} />
           <Route path="showroom">
             <Route index element={<Home />} />
+            <Route path="finalwork/:id" element={<SharedDetail />} />
             <Route path="results" element={<Results />} />
             <Route path="detail" element={<DetailMob />} />
             <Route path="genomineerden" element={<Genomineerd />} />

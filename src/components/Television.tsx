@@ -50,7 +50,7 @@ function Television() {
         let newVideos = [...oldVideos, ...paths];
         setVideos([...newVideos]);
       });
-  }, []);
+  }, [videos]);
 
   const handleVideoEnd = () => {
     setStartVideo(false);

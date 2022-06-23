@@ -4,7 +4,6 @@ import TimetableItem from "../components/TimetableItem";
 import Tetris from "react-tetris";
 import { useNavigate } from "react-router-dom";
 import data from "../data/timetableData.json";
-import { render } from "react-dom";
 import Pacman from "react-pacman";
 import Snake from "snake-game-react";
 
@@ -22,6 +21,13 @@ export default function Timetable2() {
   const [tetris, showTetris] = useState(true);
   const [pacman, showPacman] = useState(false);
   const [snake, showSnake] = useState(false);
+  const [time, setTime] = useState<string>("00:00:00");
+
+  useEffect(() => {
+    setInterval(() => {
+      setTime(getCurrentTime());
+    }, 1000);
+  }, []);
 
   function returnGameOrTimetable() {
     if (easterEgg) {
@@ -130,7 +136,7 @@ export default function Timetable2() {
               EhB → Anderlecht, BXL → Fri 24 Jun &nbsp;
             </p>
             <p className="yellow-text teletext">
-              {time.toTimeString().substring(0, 8)}
+              {time}
             </p>
           </div>
           <div className="teletext-title">
@@ -184,7 +190,6 @@ export default function Timetable2() {
     }
   }
   let easterEgg: boolean = useKeyPress("8");
-  const time = new Date();
   useEffect(() => {}, []);
   const navigate = useNavigate();
 
@@ -199,10 +204,19 @@ export default function Timetable2() {
   );
 }
 
+function getCurrentTime() {
+  let today = new Date();
+  let hours = (today.getHours() < 10 ? "0" : "") + today.getHours();
+  let minutes = (today.getMinutes() < 10 ? "0" : "") + today.getMinutes();
+  let seconds = (today.getSeconds() < 10 ? "0" : "") + today.getSeconds();
+  return hours + ":" + minutes + ":" + seconds;
+}
+
 function useKeyPress(targetKey: string): boolean {
   // State for keeping track of whether key is pressed
   const [keyPressed, setKeyPressed] = useState(false);
   // If pressed key is our target key then set to true
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   function downHandler({ key }: any): void {
     if (key === targetKey) {
       setKeyPressed(!keyPressed);
