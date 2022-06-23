@@ -276,6 +276,7 @@ export function Room802({ ...props }: JSX.IntrinsicElements["group"]) {
   );
 
   useEffect(() => {
+    // fixes billboard not loading on initial load
     setArcadeClick(false);
   }, []);
 
