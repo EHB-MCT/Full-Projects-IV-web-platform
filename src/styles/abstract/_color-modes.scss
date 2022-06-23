@@ -12,10 +12,10 @@
         background: $background;
     }
     .loader {
-        background-image: url("../../assets/darkbg.webp");
+        background-image: url("../../assets/darkbg.png");
     }
     body {
-        background-image: url("../../assets/darkbg.webp");
+        background-image: url("../../assets/darkbg.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -88,7 +88,7 @@
         background: $dark;
     }
     .loader {
-        background-image: url("../../assets/lightbg.webp");
+        background-image: url("../../assets/lightbg.png");
     }
     .lactive-class {
         background-color: $dark !important;
@@ -97,7 +97,7 @@
         color: $background !important;
     }
     body {
-        background-image: url("../../assets/lightbg.webp");
+        background-image: url("../../assets/lightbg.png");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
