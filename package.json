@@ -65,6 +65,7 @@
     "devDependencies": {
         "@types/react-burger-menu": "^2.8.3",
         "@types/three": "^0.141.0",
+        "react-pacman": "^0.0.4",
         "react-tetris": "^0.2.0"
     }
 }
